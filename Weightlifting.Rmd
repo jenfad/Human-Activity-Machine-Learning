@@ -2,7 +2,7 @@
 title: "Machine Learning to Determine Bicep Curl Method"
 author: "Jennifer Fadimba"
 date: "Sunday, March 26, 2017"
-output: html_document
+output: md_document
 ---
 
 I used a subset of data (https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv) from the http://groupware.les.inf.puc-rio.br/har#dataset#ixzz4cSvunXAe  to predict classe, which range from A to E and correspond to various ways of performing bicep curls.
@@ -18,6 +18,7 @@ dim(train1)
 ```
 
 ##Sifting Out Variables
+
 I first reduced the number of columns in the dataset by removing columns with near zero variances.  I took out all the columns with NA values because each of them had 19,216 NA values.  Due to each of these previously mentioned columns only having numerical values for two percent of the observations, I decided to omit them as predictors.
 
 ```{r}

@@ -162,8 +162,16 @@ modelFit&lt;-train(classe~., data=traindata, method=&quot;rf&quot;, trControl= t
 <div id="predicting" class="section level2">
 <h2>Predicting</h2>
 <p>The model was used to predict the classe of the observations in the validation set. The Accuracy of the model on the validation data is 99.55%, therefore I estimate out-of-sample error to be a low 0.45%.</p>
-<pre class="r"><code>predmod&lt;-predict(modelFit, validdata)
-confusionMatrix(predmod, validdata$classe)</code></pre>
+<pre class="r"><code>predmod&lt;-predict(modelFit, validdata)</code></pre>
+<pre><code>## Loading required package: randomForest</code></pre>
+<pre><code>## randomForest 4.6-12</code></pre>
+<pre><code>## Type rfNews() to see new features/changes/bug fixes.</code></pre>
+<pre><code>## 
+## Attaching package: 'randomForest'</code></pre>
+<pre><code>## The following object is masked from 'package:ggplot2':
+## 
+##     margin</code></pre>
+<pre class="r"><code>confusionMatrix(predmod, validdata$classe)</code></pre>
 <pre><code>## Confusion Matrix and Statistics
 ## 
 ##           Reference
